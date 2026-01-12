@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>LUSH Control</h1>
+
+<button onclick="start(60)">1 Minute</button>
+<button onclick="start(120)">2 Minutes</button>
+<button onclick="start(180)">3 Minutes</button>
+
+<script>
+async function start(seconds) {
+  await fetch("/.netlify/functions/lovense-start?time=" + seconds);
+}
+</script>
+
+</body>
+</html>
